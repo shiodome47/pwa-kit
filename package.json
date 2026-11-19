@@ -1,0 +1,71 @@
+{
+  "name": "@shiodome47/pwa-kit",
+  "version": "0.1.0",
+  "description": "ホーム画面に追加して使う Web アプリ（PWA）のつまずきやすいところ: インストールの案内（iPhone は図つきの手順）・LINE の中のブラウザから出る・iPad の見分け。React の部品。",
+  "keywords": [
+    "react",
+    "pwa",
+    "install",
+    "add-to-home-screen",
+    "ios",
+    "safari",
+    "ipad",
+    "line"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shiodome47/pwa-kit.git"
+  },
+  "homepage": "https://github.com/shiodome47/pwa-kit#readme",
+  "bugs": "https://github.com/shiodome47/pwa-kit/issues",
+  "type": "module",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./style.css": "./dist/style.css",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build && tsc -p tsconfig.build.json && node scripts/copy-css.mjs",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "dev": "vite --config examples/web/vite.config.ts",
+    "build:demo": "vite build --config examples/web/vite.config.ts",
+    "prepack": "npm run build",
+    "prepublishOnly": "npm run typecheck && npm test"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^10.4.2",
+    "@testing-library/jest-dom": "^8.0.0",
+    "@testing-library/react": "^16.3.3",
+    "@types/node": "^22.20.5",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "@vitejs/plugin-react": "^6.3.0",
+    "jsdom": "^31.0.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.9.3",
+    "vite": "^8.3.8",
+    "vitest": "^5.1.1"
+  }
+}
