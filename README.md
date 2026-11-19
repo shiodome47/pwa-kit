@@ -7,7 +7,7 @@
 - **LINE の中のブラウザ**で開かれたら、いつものブラウザで開き直す
 - ホーム画面のアプリで開いているかの判定、**iPad の見分け**（Safari がパソコンのふりをする件）
 
-- 見本: （Vercel に置いたら、ここに URL を書きます）
+- 見本: https://pwa-kit-tau.vercel.app/ （スマホで開くと、その端末での案内が出ます。文言・ライト／ダーク・色も切り替えられます）
 - English: [see below](#english)
 
 ## 入れ方
@@ -212,6 +212,8 @@ React parts for the tricky bits of **PWAs** (web apps you add to the Home Screen
 - **Install guide**: a button on Android / desktop; **illustrated steps** that mimic Safari’s screens on iPhone and iPad
 - Re-open the page in the usual browser when it was opened **inside LINE’s in-app browser**
 - Detect standalone mode (opened from the Home Screen) and **iPadOS** (iPad Safari pretends to be a Mac)
+
+- Demo: https://pwa-kit-tau.vercel.app/
 
 ```bash
 npm install @shiodome47/pwa-kit
